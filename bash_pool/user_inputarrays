@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Coping with user input.
+
+PS3="Choose (1~5):"
+echo "Choose from the list below:"
+select color in red green blue yellow purple
+do 
+	break
+done
+echo "You chose $color." 
+
+if [ "$color" = "" ]; then
+	echo "Error in entry."
+	exit 1
+fi
+
+

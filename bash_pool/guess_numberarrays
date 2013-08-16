@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# This is an advanced example with numbers and inputs.
+# A GUESSING GAME
+
+secretNumber=$(( ((`date +%N` / 1000) % 100) + 1  ))
+# date +%N gives the Nanosecond portion of current time.
+
+#echo $secretNumber
+
+guess=-1
+while [ "$guess" != "$secretNumber" ]; do
+	echo -n "I am thinking of a number between 1 and 100. Enter your guess:"
+	read guess
+	if [ "$guess" = "" ]; then
+		echo "Please enter a number:"
+	elif [ "$guess" = "$secretNumber" ]; then
+		echo -e "\aYes! $guess is the correct number."
+	elif [ "$secretNumber" -gt "$guess" ]; then
+		echo "The secret number is larger than you guess. Try again!"
+	else 
+		echo "The secret number is smaller than you guess. Try again!"
+	fi
+done
+

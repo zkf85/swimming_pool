@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Based on the string operator "#" and "%", we can obtain the ip address from the ifconfig
+x=`/sbin/ifconfig`
+echo $x

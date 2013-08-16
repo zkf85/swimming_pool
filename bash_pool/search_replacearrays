@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Search string and replace it/them with another.
+
+alpha="This is a test string in which the word \"test\" is replaced."
+beta="${alpha/test/replace}"
+
+echo $beta
+
+# use double "//" to replace all case in the string.
+
+beta2="${alpha//test/replace}"
+echo $beta2

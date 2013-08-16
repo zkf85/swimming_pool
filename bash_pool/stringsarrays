@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# String and Substring:
+#	It is useful to be able to take strings apart and put them together in different ways. Here's how to select a substring from a string:
+
+string="This is a substring test."
+substring=${string:15:4}
+
+echo "$substring"
+# In this example, substring contains "ring". 
+
+# Always remember the rule:
+
+# substring={string_name:starting_point:length}
+# The string is zero-based.
+

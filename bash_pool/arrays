@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Creating and using arrays:
+
+# Create a list of all file in the directory with array
+
+array=`ls`
+len=${#array[*]}
+echo "the array has $len members. They are:"
+i=0
+while [ $i -lt $len ]; do
+	echo "$i: ${array[$i]}"
+	let i++
+done
+
+

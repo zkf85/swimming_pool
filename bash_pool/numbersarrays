@@ -1,0 +1,26 @@
+#!/bin/bash
+
+## objective 1: echo from 1 to 6 
+#n=1
+## CAUTION: no spaces between n and the number you want to give.
+#
+#while [ $n -le 6 ]; do
+#	echo $n;
+#	let n++;
+#done
+#
+#
+## objective 2: echo a 12 by 12 matrix with numbers cross multiply.
+n=1
+# looper for columns
+while [ $n -le 12 ]; do
+	m=1
+	# looper for rows
+	while [ $m -le 12 ]; do
+		printf "% 4d" $(( $n * $m ));
+		let m++
+	done
+	echo " "
+	# start new line
+	let n++
+done 

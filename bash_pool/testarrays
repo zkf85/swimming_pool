@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# the first line is a special line that names an appropriate command processor. 
+if [ -e . ] 
+# to test whether a particular element existed ("-e") in the specified directory (".") .
+# remember that "[" is an alias for the command "test". 
+then 
+	echo "Yes."
+else 
+	echo "No."
+fi
+# Remember that the result value of the test command is not normal: for "true" is 0, and "false" is 1.
+

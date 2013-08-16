@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# A silly poem with replacing strings 
+
+list="chick duck penguin bear"
+poem="I wanna be a x\n\
+A x is what I'd love to be\n\
+If I became a x\n\
+How happy I would be.\n"
+
+for looper in $list; do
+	echo -e ${poem//x/$looper}
+done

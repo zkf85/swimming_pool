@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# brace expansion operator:
+
+echo {a..z}
+
+echo {0..8}
+
+for n in {1..5}; do
+	echo $n
+done

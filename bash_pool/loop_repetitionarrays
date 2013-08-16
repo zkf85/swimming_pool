@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# this script is an introduction for loops and repetition
+
+for fn in tom dick harry; do
+	echo "$fn"
+done
+
+# This method will work for any list that uses spaces as delimiters. But what happens if you must parse a list that must be delimited by linefeeds instead of spaces, such as the case of a list of filenames or paths that contain spaces as part of their names?
+
+
