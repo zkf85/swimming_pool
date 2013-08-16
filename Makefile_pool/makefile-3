@@ -1,0 +1,24 @@
+# i'm a comment
+# i'm a comment
+# i'm a comment
+# Variable for Compiler
+CC=g++
+# Variable for Flag
+CFlag=-c -Wall
+
+all: hello_KF
+
+hello_KF: main.o factorial.o hello.o
+	$(CC) main.o factorial.o hello.o -o hello_KF
+
+main.o: main.cpp
+	$(CC) $(CFlag) main.cpp
+
+factorial.o: factorial.cpp
+	$(CC) $(CFlag) factorial.cpp
+
+hello.o: hello.cpp
+	$(CC) $(CFlag) hello.cpp
+
+clean:
+	rm -rf *o hello_KF
